@@ -42,13 +42,13 @@ void Render::start()
               << std::endl;
     changeState(1);
 }
-void Render::start(std::string arg)
+void Render::start(std::string arg) const
 {
 
     std::cout << arg << std::endl;
 }
 
-std::string Render::getCurrentState()
+std::string Render::getCurrentState() const
 {
     std::string stateString;
     switch (state)

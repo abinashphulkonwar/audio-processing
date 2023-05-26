@@ -11,13 +11,13 @@ public:
     ~Render();
 
     void start();
-    void start(std::string arg);
+    void start(std::string arg) const;
 
 private:
     int state;
     std::string value;
     void changeState(int newState);
-    std::string getCurrentState();
+    std::string getCurrentState() const;
 };
 
 #endif
