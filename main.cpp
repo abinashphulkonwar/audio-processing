@@ -27,7 +27,8 @@ int main()
     *ref = 9837734;
     cout << *ref << " " << val << endl;
     {
-        Render *renderScreen = new Render[10];
+        graphics::
+            Render *renderScreen = new graphics::Render[10];
 
         renderScreen->start();
         string val = "🎢";
@@ -38,7 +39,7 @@ int main()
             delete[] renderScreen;
     }
     {
-        Render renderScreen(1);
+        graphics::Render renderScreen(1);
 
         renderScreen.start();
         renderScreen.start();
