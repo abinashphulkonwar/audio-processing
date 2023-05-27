@@ -2,38 +2,40 @@
 
 #include "./src/graphics/Render.h"
 
+using namespace std;
+
 int main()
 {
-    std::string data[] = {"🚀", "🎢", "🎡", "🎠"};
-    const int length = sizeof(data) / sizeof(std::string);
-    std::cout << length << " " << sizeof(std::string) << std::endl;
+    string data[] = {"🚀", "🎢", "🎡", "🎠"};
+    const int length = sizeof(data) / sizeof(string);
+    cout << length << " " << sizeof(string) << endl;
     for (int i = 0; i < length; i++)
     {
-        std::cout << data[i]
-                  << std::endl;
+        cout << data[i]
+             << endl;
     }
 
-    std::cout
-        << "data" << std::endl;
+    cout
+        << "data" << endl;
     int val = 93748743;
     int *const ref = &val;
     if (&val == ref)
     {
-        std::cout << " 🚀" << std::endl;
+        cout << " 🚀" << endl;
     }
-    std::cout << ref << std::endl;
+    cout << ref << endl;
     *ref = 9837734;
-    std::cout << *ref << " " << val << std::endl;
+    cout << *ref << " " << val << endl;
     {
-        Render *renderScreen = new Render;
+        Render *renderScreen = new Render[10];
 
         renderScreen->start();
-        std::string val = "🎢";
+        string val = "🎢";
         renderScreen->start(val);
         renderScreen->start();
         renderScreen->start();
         if (renderScreen != NULL)
-            delete renderScreen;
+            delete[] renderScreen;
     }
     {
         Render renderScreen(1);
