@@ -1,6 +1,8 @@
 
 #include "Render.h"
 
+using namespace graphics;
+
 Render::Render()
 {
     this->value = " 🚀🚀";

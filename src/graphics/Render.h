@@ -3,21 +3,24 @@
 #include <iostream>
 #include <sstream>
 
-class Render
+namespace graphics
 {
-public:
-    Render();
-    Render(int arg);
-    ~Render();
 
-    void start();
-    void start(std::string arg) const;
+    class Render
+    {
+    public:
+        Render();
+        Render(int arg);
+        ~Render();
 
-private:
-    int state;
-    std::string value;
-    void changeState(int newState);
-    std::string getCurrentState() const;
-};
+        void start();
+        void start(std::string arg) const;
 
+    private:
+        int state;
+        std::string value;
+        void changeState(int newState);
+        std::string getCurrentState() const;
+    };
+}
 #endif
